@@ -1,0 +1,29 @@
+Nodo 
+Nodo.valor
+Nodo.siguiente
+Nodo.anterior
+
+agregarNodoLista(Nodo lista, Nodo vi):
+  if(lista==null):
+    return vi
+  end if
+  if (vi.valor == lista.valor):
+    print("El número que intentas ingresar ya existe")
+    return lista  
+  end if
+  elif (vi.valor < lista.valor):
+    auxiliar1=lista.anterior
+    lista.anterior = vi
+    vi.siguiente = lista
+    vi.anterior = auxiliar
+  end if
+  elif (lista.siguiente == None):
+    lista.siguiente = vi
+    vi.anterior = lista
+  else:
+    agregarNodoLista(Nodo lista.siguiente, Nodo vi)
+  end if
+    
+
+
+
